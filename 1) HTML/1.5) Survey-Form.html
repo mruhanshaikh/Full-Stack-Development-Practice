@@ -6,26 +6,42 @@
     <title>Survey Form</title>
 </head>
 <body>
-    <h1>freeCodeCamp Survey Form</h1>
+    <h1 id="title">freeCodeCamp Survey Form</h1>
     <p id="description">Thank you for taking the time to help us improve the platform</p>
     <form id="survey-form">
-        <label for="name">Name</label>
+        <label id="name-label"for="name">Name</label>
         <input required type="text" id="name" placeholder="Enter your name">
-        <label for="email">Email</label>
+        <label id="email-label"for="email">Email</label>
         <input required type="email" id="email" placeholder="Enter your email">
-         <label for="email">Age(optional)</label>
+         <label id="number-label"for="number">Age(optional)</label>
         <input  type="number" id="number" min="10" max="90" placeholder="Enter your age">
          <label for="dropdown">Which option best describes your current role?</label>
-         <select id=" dropdown" name="dropdown">
-            <option value="student">Student</option>
+         <select id="dropdown" name="dropdown">
+            <option selected value="student">Student</option>
             <option value="part-time-job">Part Time Job</option>
             <option value="full-timejob">Full Time Job</option>
             <option value="businessmen">Businessmen</option>
          </select>
-         <label for="radio">What is your favorite feature of freeCodeCamp?</label>
-         <input type="radio" name="radio-button" value="definitely">
-         <input type="radio" name="radio-button" value="Maybe">
-         <input type="radio" name="radio-button" value="Not sure">
+         <p>What is your favorite feature of freeCodeCamp?</p>
+         <label for="definitely">Definitely</label>
+         <input checked id="definitely" type="radio" name="radio-button" value="definitely">
+         <label for="Maybe">Maybe</label>
+         <input id="Maybe"type="radio" name="radio-button" value="Maybe">
+         <label for="Not-sure">Not sure</label>
+         <input id="Not-sure"type="radio" name="radio-button" value="Not sure">   
+         <p>What would you like to see improved? (Check all that apply)</p>
+         <label for="Front-end">Front-end Projects</label>
+         <input type="checkbox" value="Front-end Projects" name="Front-end" id="Front-end">
+         <label for="Back-end">Back-end Projects</label>
+         <input type="checkbox" value="Back-end Projects" name="Back-end" id="Back-end">
+         <label for="database">Database Projects</label>
+         <input type="checkbox" value="database" name="database" id="database">
+         <label for="deployment">Deployment Projects</label>
+         <input type="checkbox" value="deployment" name="deployment" id="deployment">
+         <label for="comments">Any comments or suggestions?</label>
+         <textarea id="comments" cols="30" rows="10" name="comments">
+         </textarea>
+         <button type="submit" id="submit" value="submit">submit</button>
     </form>
 </body>
 </html>
