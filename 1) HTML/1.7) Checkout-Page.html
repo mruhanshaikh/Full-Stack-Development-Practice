@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+</head>
+<body>
+    <h1>Checkout</h1>
+    <section><h2>Your Cart</h2><figure><img src="https://cdn.freecodecamp.org/curriculum/labs/cube.jpg" alt="spoon"><figcaption>Left-handed spoon</figcaption></figure><p aria-label="price of spoon">$29.99</p></section>
+    <section><h2>Payment Information</h2>
+        <form>
+            <label for="card-name">Cardholder Name</label>
+            <input required aria-required="true" type="text" name="card-name" id="card-name">
+            <label for="card-number">Card Number</label>
+            <input required aria-required="true" type="number" name="card-number" id="card-number">
+            <label for="card-date">Expiry Date</label>
+            <input required aria-required="true" type="datetime" name="card-date" id="card-date">
+            <label for="card-cvv">Card CVV</label>
+            <input required  aria-required="true" type="number" name="card-cvv" id="card-cvv">
+            <button role="submmit-button"type="submit" value="place-order"name="place-order">Place Order</button>
+        </form>
+    </section>
+</body>
+</html>
