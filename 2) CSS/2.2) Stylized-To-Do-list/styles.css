@@ -1,0 +1,15 @@
+a{
+    text-decoration: none;
+}
+li:link{
+   color:blue; 
+}
+a:visited{
+    color:purple;
+}
+a:hover{
+    color:red;
+}
+a:focus{
+    outline: 2px solid orange;
+}
