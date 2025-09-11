@@ -38,6 +38,6 @@ body{
     text-decoration: none;
     border-radius: 5px;
 }
-a:hover{
+.read-more:hover{
    background-color:#555;
 }
