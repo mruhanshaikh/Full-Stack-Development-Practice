@@ -9,6 +9,7 @@ nav{
     width:50%;
     margin:0,auto;
     box-shadow:10px 5px 5px red;
+    box-sizing:border-box;
 }
 ul{
     display:flex;
