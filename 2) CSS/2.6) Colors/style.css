@@ -20,6 +20,6 @@ li{
    line-height: 5px;
 }
 li:hover{
-    
+    text-decoration: underline;
 }
 
