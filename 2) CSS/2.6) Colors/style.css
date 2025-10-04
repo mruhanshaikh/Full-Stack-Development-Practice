@@ -3,6 +3,7 @@
     padding: 0;
 }
 body{
+    box-sizing:content-box;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 nav{
