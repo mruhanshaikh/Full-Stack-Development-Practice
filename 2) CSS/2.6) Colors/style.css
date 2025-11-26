@@ -13,6 +13,10 @@ nav{
     box-sizing:border-box;
     border:20x solid red;
 }
+p{
+    border:2px solid red;
+    text-decoration: dashed;
+}
 ul{
     display:flex;
     justify-content: space-around;
