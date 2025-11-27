@@ -20,6 +20,7 @@ p{
 ul{
     display:flex;
     justify-content:space-between;
+}
 li{
    list-style-type: none;
    line-height: 5px;
