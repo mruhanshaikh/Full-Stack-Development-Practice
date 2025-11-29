@@ -22,7 +22,7 @@ ul{
     justify-content:space-between;
 }
 li{
-   list-style-type: disc;
+   list-style-type: none;
    line-height: 5px;
 }
 li:hover{
