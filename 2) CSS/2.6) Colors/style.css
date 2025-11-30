@@ -16,6 +16,7 @@ nav{
 p{
     border:2px solid red;
     text-decoration: dashed;
+    line-height: normal;
 }
 ul{
     display:flex;
