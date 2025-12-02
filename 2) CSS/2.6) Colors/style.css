@@ -27,7 +27,7 @@ li{
 }
 li:hover{
     text-decoration: underline;
-    color:red;
+    color:blue;
     font-weight: 400;
 }
 
