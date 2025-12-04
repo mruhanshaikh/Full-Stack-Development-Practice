@@ -1,0 +1,1 @@
+This repository documents my journey to becoming a full-stack web developer. It starts from the fundamentals (HTML,CSS & JS) and gradually grows into advanced frontend, backend, databases, authentication, APIs, deployment, and full-stack applications.
