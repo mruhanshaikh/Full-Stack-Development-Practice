@@ -19,7 +19,6 @@ body{
     gap:1rem;
 }
 .card{
-    border:2px solid white;
     width:400px;
     height:400px;
     display: grid;
