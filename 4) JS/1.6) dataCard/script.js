@@ -46,9 +46,12 @@ const users = [
 ];
 let data='';
 let main=document.querySelector('main');
-// let bgimg=document.querySelector('.bgimg');
-users.forEach((i)=>{
-           data+= `<div class="card">
+let btn=document.getElementById('fetch');
+let curIndex=0;
+btn.addEventListener('click',()=>{
+    if(curIndex<users.length){
+        let i=users[curIndex];
+        data+=`<div class="card">
                 <div class="img-wrapper">
              <div class="bgimg" style="background-image:url(${i.bgImage})"></div>
              <img src="${i.profileImage}" alt="profile_img">
@@ -84,7 +87,55 @@ users.forEach((i)=>{
                 </div>
              </div>
         </div>`
-})
-main.innerHTML=data;
+        main.innerHTML=data;
+        curIndex++;
+    }else{
+         btn.textContent = "Nothing more to show";
+        // btn.style.pointerEvents ='none'; 
+        btn.style.cursor = 'not-allowed';
+        btn.style.backgroundColor='rgba(255, 255, 255, 0.667)';
+    }
+});
+// users.forEach((i)=>{
+        //    data+= `<div class="card">
+        //         <div class="img-wrapper">
+        //      <div class="bgimg" style="background-image:url(${i.bgImage})"></div>
+        //      <img src="${i.profileImage}" alt="profile_img">
+        //     </div>
+        //     <div class="name">
+        //         <div class="title">
+        //             <h1>${i.username}
+        //         </div>
+        //         <div class="description">
+        //             ${i.description}
+        //         </div>
+        //     </div>
+        //      <div class="socials">
+        //         <div class="item">
+        //             <div class="num">
+        //                 ${(i.metrics.likes/1000).toFixed(1)+"k"}
+        //             </div>
+        //             <div class="subtitle">
+        //                 likes
+        //             </div>
+        //         </div>
+        //         <div class="item">
+        //             <div class="num">
+        //                 ${i.metrics.posts}
+        //             </div>
+        //              <div class="subtitle">posts</div>
+        //         </div>
+        //         <div class="item">
+        //             <div class="num">
+        //                 ${(i.metrics.views/1000).toFixed(1)+"k"}
+        //             </div>
+        //             <div class="subtitle">views</div>
+        //         </div>
+        //      </div>
+        // </div>`
+// })
+
+// let bgimg=document.querySelector('.bgimg');
+
  
            
