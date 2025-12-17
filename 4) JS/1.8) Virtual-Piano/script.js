@@ -66,6 +66,6 @@ document.body.addEventListener('keydown', (e) => {
 });
  document.querySelectorAll(".white-box, .black-box").forEach((el)=>{
     el.addEventListener('pointerdown',()=>{
-       if(idMap[el.id])playNote(sounds[el.id])
+       if(idMap[el.id])playNote(sounds[idMap[el.id]])
     });
  });
