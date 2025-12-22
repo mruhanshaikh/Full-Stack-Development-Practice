@@ -1,3 +1,4 @@
+## Live - https://matrix-text-revealed.netlify.app/ 
 ## Learnings & Improvements
 
 - **Matrix-style text reveal**
