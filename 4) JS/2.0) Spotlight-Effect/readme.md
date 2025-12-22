@@ -1,4 +1,5 @@
 ## Key Learnings
+## Live : https://spotlighhtt.netlify.app/
 
 - **9:16 container with 16:9 content**  
   Rotation alone does not fix layout issues. When a vertical container holds horizontal content, layout geometry must be corrected (width/height logic) along with rotation.
