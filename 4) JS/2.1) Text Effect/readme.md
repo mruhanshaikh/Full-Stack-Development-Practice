@@ -1,7 +1,7 @@
 ## Live - https://matrix-text-revealed.netlify.app/ 
 ## Learnings & Improvements
 
-- **Matrix-style text reveal**
+- **Matrix-style text revealed**
   Used an `iteration` progress variable to gradually reveal original characters while replacing unrevealed ones with random letters.
 
 - **Index-based reveal logic**
