@@ -1,14 +1,19 @@
 @import "tailwindcss";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base{
+  body{
+  background-color: var(--color-black);
+  color:white;
+  }
 }
-
-html, body {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  color: white;
-  font-family: Helvetica, sans-serif;
+@layer components{
+  .card{
+    background-color: white;
+    color:black;
+    width:300px;
+    aspect-ratio:1/1.1;
+    border-radius:10px;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+  }
 }
