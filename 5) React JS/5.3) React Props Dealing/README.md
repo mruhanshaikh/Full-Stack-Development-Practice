@@ -1,3 +1,3 @@
-A responsive job listing UI built using React and Tailwind CSS.
-The project demonstrates component-based design, reusable job cards, and dynamic rendering using mapped data.
-Styled with Tailwind for fast, utility-first UI development.
+A job listing UI built with React and Tailwind CSS featuring a clean, reusable card design.
+Utilizes Tailwind’s @layer and @apply to organize base and component styles for better scalability.
+Focuses on React data flow through props and dynamically rendering multiple cards from an array using map().
