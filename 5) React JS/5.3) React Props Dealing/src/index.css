@@ -11,8 +11,10 @@
     color:black;
     width:300px;
     aspect-ratio:1/1.1;
-    border-radius:10px;
-    display: flex;
+    border-radius:1rem;
+    display:grid;
+    grid-template-rows:1fr 2fr 1fr;
+    padding:1rem;
     /* align-items: center;
     justify-content: center; */
   }
