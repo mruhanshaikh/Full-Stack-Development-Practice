@@ -17,6 +17,7 @@ const Card = (details) => {
           <div className="flex  group items-center outline-1 outline-gray-300 py-0.5 px-2 hover:bg-gray-300 transition duration-300 ease-in rounded-lg">
             <span className="text-gray-500">Save</span>
             <span className="group-hover:text-gray-50 cursor-pointer">
+              {/* conditional rendering */}
               {details.bookmark?<RiBookmarkLine size={18} color="gray" />:<RiBookmarkFill size={18} color="gray" />}
             </span>
           </div>
