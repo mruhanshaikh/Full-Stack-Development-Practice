@@ -1,6 +1,6 @@
-const TextArea = (el) => {
+const TextArea = ({...rest}) => {
   return (
-  <textarea value={el.state} onChange={el.onChange} className="px-[1rem] py-[0.5rem] resize-none resize: vertical" required placeholder={el.placeholder}>
+  <textarea {...rest} className="px-[1rem] py-[0.5rem] resize-none resize: vertical" required>
   </textarea>
   )
 }

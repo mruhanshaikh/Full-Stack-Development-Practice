@@ -3,18 +3,26 @@ import Label from "./Components/Label"
 import TextArea from "./Components/TextArea"
 import Button from "./Components/Button"
 import {RiAddLargeFill} from "@remixicon/react"
+import Card from "./Components/Card"
 import { useState } from "react"
 const App = () => {
-const [form, setform] = useState({
-    profileUrl:"",
-    profileName:"",
-    profileStat:false,
-    profileBio:"",
-    profileViews:"",
-    profileLikes:""
-})
-    function butClick(e){
+  const initialForm = {
+  profileUrl: "",
+  profileName: "",
+  profileStat: "",
+  profileBio: "",
+  profileViews: "",
+  profileLikes: ""
+}
+ const [form, setform] = useState(initialForm)
+ const [cards, setcard] = useState([]);
+    function formSubmit(e){
     e.preventDefault();
+    setform(initialForm);
+    const formValidate = Object.fromEntries(
+    Object.entries(form).map(([key,value])=>[key,value.trim()]))
+    if(Object.values(formValidate).some(v=>v==="")) return
+    setcard(prev=>[...prev, formValidate]);
     }
     function handlChange(e){
     const {name,value} =e.target
@@ -28,22 +36,27 @@ const [form, setform] = useState({
     }))
     }
   return (
-    <div>
-      <form className="flex p-[1rem] w-full justify-stretch">
+    <div className="flex flex-col  gap-[1rem] p-[1rem]">
+      <form onSubmit={formSubmit} className="flex  w-full justify-stretch">
         <fieldset className=" border p-[1rem] border-white flex flex-col gap-[1rem] w-full">
         <legend className="font-bold">Fill Out Your Card Form</legend>
-        <Input name="profileUrl"onChange={handlChange} state={form.profileUrl} type="url" placeholder="Enter Profile Image URL"/>
-        <Input name="profileName" onChange={handlChange} state={form.profileName} type="text" placeholder="Enter Your Name"/>
-        {/* <div className="flex gap-[0.5rem] px-[1rem] py-[0.5rem]">
-        <div className="flex gap-[0.5rem]"><Input onChange={handlChange} checked={form.profileStat} type="radio" name="choice" id="radio1"/><Label htmlFor="radio1">verified</Label></div>
-        <div className="flex gap-[0.5rem]"><Input onChange={handlChange} checked={form.profileStat} type="radio" name="choice" id="radio2"/><Label htmlFor="radio2">Not-Verified</Label></div>
-        </div> */}
-         <TextArea name="profileBio" onChange={handlChange} state={form.profileBio} placeholder="Enter Your Bio"/>
-         <Input  name="profileViews"onChange={handlChange} state={form.profileViews} type="number"  placeholder="Enter profile Views"/>
-         <Input name="profileLikes" onChange={handlChange} state={form.profileLikes} type="number"  placeholder="Enter profile Likes"/> 
-         <Button onClick={butClick} text="Submit"/>
+        <Input name="profileUrl"onChange={handlChange} value={form.profileUrl} type="url" placeholder="Enter Profile Image URL"/>
+        <Input name="profileName" onChange={handlChange} value={form.profileName} type="text" placeholder="Enter Your Name"/>
+        <div className="flex gap-[0.5rem] px-[1rem] py-[0.5rem]">
+        <div className="flex gap-[0.5rem]"><Input onChange={handlChange} checked={form.profileStat==="Verified"} type="radio" name="profileStat" value="Verified" id="radio1"/><Label htmlFor="radio1">verified</Label></div>
+        <div className="flex gap-[0.5rem]"><Input onChange={handlChange} checked={form.profileStat==="notVerified"} type="radio" name="profileStat" value="notVerified" id="radio2"/><Label htmlFor="radio2">Not-Verified</Label></div>
+        </div>
+         <TextArea name="profileBio" value={form.profileBio} onChange={handlChange} placeholder="Enter Your Bio"/>
+         <Input  name="profileViews"onChange={handlChange} value={form.profileViews} type="number"  placeholder="Enter profile Views"/>
+         <Input name="profileLikes" onChange={handlChange} value={form.profileLikes} type="number"  placeholder="Enter profile Likes"/> 
+         <Button text="Submit"/>
          </fieldset>
       </form>
+      <div className="flex flex-wrap justify-center gap-[1rem]">
+        {cards.map((e,i)=>{
+        return <Card key={i} data={e}/>
+        })}
+      </div>
     </div>
   )
 }
