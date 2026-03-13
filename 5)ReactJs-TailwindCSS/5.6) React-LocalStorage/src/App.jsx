@@ -6,23 +6,29 @@ import {RiAddLargeFill} from "@remixicon/react"
 import Card from "./Components/Card"
 import { useState } from "react"
 const App = () => {
+  const items=JSON.parse(localStorage.getItem('item'))||[];
+  const [cards, setcard] = useState(items);//[];
   const initialForm = {
   profileUrl: "",
   profileName: "",
   profileStat: "",
   profileBio: "",
-  profileViews: "",
-  profileLikes: ""
+  profileViews:"",
+  profileLikes:""
 }
  const [form, setform] = useState(initialForm)
- const [cards, setcard] = useState([]);
     function formSubmit(e){
     e.preventDefault();
     setform(initialForm);
     const formValidate = Object.fromEntries(
     Object.entries(form).map(([key,value])=>[key,value.trim()]))
-    if(Object.values(formValidate).some(v=>v==="")) return
-    setcard(prev=>[...prev, formValidate]);
+    if(Object.values(formValidate).some(v=>v==="")){
+      alert("Please Provide Correct Values !!")
+      return  
+    } 
+    const items=[...cards,formValidate];  
+    setcard(items);
+    localStorage.setItem('item',JSON.stringify(items));
     }
     function handlChange(e){
     const {name,value} =e.target
@@ -35,6 +41,11 @@ const App = () => {
       [name]:value,
     }))
     }
+    function deleteCard(index){
+  const updated = cards.filter((_, i) => i !== index);
+  setcard(updated);
+  localStorage.setItem('item', JSON.stringify(updated));
+}
   return (
     <div className="flex flex-col  gap-[1rem] p-[1rem]">
       <form onSubmit={formSubmit} className="flex  w-full justify-stretch">
@@ -54,7 +65,7 @@ const App = () => {
       </form>
       <div className="flex flex-wrap justify-center gap-[1rem]">
         {cards.map((e,i)=>{
-        return <Card key={i} data={e}/>
+        return <Card key={i} id={i} data={e} onDelete={() => deleteCard(i)}/>
         })}
       </div>
     </div>

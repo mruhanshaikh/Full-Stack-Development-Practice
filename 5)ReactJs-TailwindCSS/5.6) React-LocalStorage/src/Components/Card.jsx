@@ -1,6 +1,6 @@
 import {RiUserFill} from "@remixicon/react"
 import {RiHeartFill} from "@remixicon/react"
-const Card = ({data}) => {
+const Card = ({data,id,onDelete}) => {
   return (
       <div className="w-[320px] aspect-[1/1.2] bg-white rounded-lg flex justify-center items-center">
             <div className="w-[310px] relative aspect-[1/1.2] bg-center bg-cover bg-no-repeat rounded-2xl" style={{ backgroundImage: `url(${data.profileUrl})` }}>   
@@ -14,7 +14,7 @@ const Card = ({data}) => {
                             <div className="flex items-center gap-0.5 "><span className="hover:text-red-800 trasition duration-300 ease-in">< RiUserFill size={20} /></span><span>{data.profileViews}</span></div>
                             <div className="flex items-center gap-0.5"><span className="hover:text-red-800" trasition duration-300 ease-in>< RiHeartFill size={20} /></span><span>{data.profileLikes}</span></div>
                         </div>
-                        <div><button className="px-2 py-1 active:scale-75 transition duration-300 ease-in rounded-lg bg-red-600">Follow</button></div>
+                        <div><button onClick={onDelete} id={id}className="px-2 py-1 active:scale-75 transition duration-300 ease-in rounded-lg bg-red-600">Delete</button></div>
                     </div>
                 </div>          
             </div>
