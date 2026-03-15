@@ -1,4 +1,4 @@
-React Form Card Manager 
+React Form Cards Manager 
 Live:https://dynamicprofilebuilder.netlify.app/
 
 A small React project demonstrating two-way binding with multiple form fields, single change handler, input validation, and dynamic card rendering with delete functionality.
