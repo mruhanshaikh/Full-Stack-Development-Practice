@@ -1,4 +1,5 @@
 # React API Fetching Demo
+# Live : https://dynamicolorblog.netlify.app/
 
 This project demonstrates how to fetch data from an API in a React application and render it dynamically in the UI. It also explores key React concepts such as state management, mapping data to components, using Axios for HTTP requests, and applying dynamic inline styles.
 
