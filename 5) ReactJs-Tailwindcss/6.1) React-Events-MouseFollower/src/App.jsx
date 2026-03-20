@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 const App = () => {
   const [mouse, setmouse] = useState({mouseX:0,mouseY:0})
-  const [follower, setfollower] = useState({x:0,y:0})
   useEffect(() => {
     document.addEventListener('mousemove',(e)=>{
       setmouse(
