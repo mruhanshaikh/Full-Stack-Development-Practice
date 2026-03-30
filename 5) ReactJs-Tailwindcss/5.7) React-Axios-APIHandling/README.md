@@ -58,7 +58,7 @@ Axios reduces boilerplate and simplifies API calls.
 
 ---
 
-### 3. Managing API Data with React States
+### 3. Managing API Data with React State
 
 React state (`useState`) is used to store the API response.
 
