@@ -158,7 +158,7 @@ Example:
 <div key={user.id}>
 ```
 
-The key helps React:
+The key help React:
 
 * identify which elements changed
 * efficiently update the DOM
