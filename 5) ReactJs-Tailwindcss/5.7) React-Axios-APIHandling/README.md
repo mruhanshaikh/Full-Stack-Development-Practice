@@ -177,7 +177,7 @@ The key is applied to the **top-level element inside the map**, which in this ca
 * API responses are stored in React state.
 * The `map()` function converts data into UI elements.
 * Objects cannot be rendered directly in JSX.
-* Inline styles can dynamically generate UI effects.
+* Inline styles can dynamically generate UI effect.
 * The `key` prop is required for efficient list rendering.
 
 ---
