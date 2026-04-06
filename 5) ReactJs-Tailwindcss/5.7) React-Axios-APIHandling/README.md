@@ -185,7 +185,7 @@ The key is applied to the **top-level element inside the map**, which in this ca
 ## 🛠 Technologies Used
 
 * React
-* Axioss
+* Axios
 * JavaScript (ES6+)
 * JSX
 * Tailwind CSS
