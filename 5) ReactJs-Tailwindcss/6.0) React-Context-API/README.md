@@ -1,7 +1,7 @@
 # 🛍️ React E-Commerce Product Viewer
 ## Live: https://shoppmee.netlify.app/
 
-A simple and scalable **React.js e-commerce products module** built to deeply understand and implement the **Context API**, routing, and dynamic UI rendering.
+A simple and scalable **React.js e-commerce product module** built to deeply understand and implement the **Context API**, routing, and dynamic UI rendering.
 
 ---
 
