@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@layer base{
+  body{
+    background-color: black;
+    color:white;
+    font-size:clamp(24px,1vw,28px);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform:uppercase;
+  }
+  ::-webkit-scrollbar{
+    display:none;
+  }
+}
